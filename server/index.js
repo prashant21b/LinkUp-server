@@ -25,6 +25,9 @@ mongoose.connect(process.env.MONGO_URL,
 // app.post('/api/register',(req,res)=>{
 //     console.log("registered end point",req.body)
 // })
+app.get('/',(req,res)=>{
+    res.send("Hello")
+})
 app.use('/api',auth)
 app.use('/api/posts',post)
 app.use('/api/chats',chat)
